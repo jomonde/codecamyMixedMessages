@@ -1,20 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Motivational Quotes</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="javascript" href="script.js">
+    <title>The Fortune Cookie</title>
+    <style>
+      body {
+        background-image: url('fortuneCookie.jpg'); 
+        background-size: cover; 
+        background-position: top;
+        background-repeat: no-repeat; 
+        margin: 18%; border: 3px; 
+        text-align: center;
+      }
+      div {
+        margin: auto;
+        width: 32%;
+      }
+    </style>
   </head>
   <body>
-      <h1>Motivational Quotes</h1>
-      <h2>Get Motivated!</h2>
-      <p></p>
-      <p></p>
-      <p>Click the button below and enjoy your quote!</p>
-      <p><button onclick="giveQuote()" type="button">Click Here</button></p>
-      <p id="quote"></p>
+    <div>
+      <h1>Fortune Cookie</h1>
+      <h2>Click the button below to reveal your good fortune.</h2>
+      <button onclick="giveQuote()" type="button">Click for fortune.</button>
+      <h3 id="quote">Your fortune is within...</h3>
+        <script>
+          const quotes = 
+            [
+              "Good, better, best. Never let it rest until your good is better and your better is best.",
+              "With the new day comes new strength and new thoughts.",
+              "Ever tried. Ever failed. No matter. Try Again. Fail again. Fail better.",
+              "If you can dream it, you can do it."
+            ];
+          const randomQuote = () => {
+            let n = Math.floor(Math.random() * (quotes.length))
+            return quotes[n];
+          }
+          const giveQuote = () => {
+            document.getElementById("quote").innerHTML = randomQuote();
+          }
+          </script>
+      </div>  
   </body>
 </html>
