@@ -19,10 +19,14 @@
         margin: auto;
         width: 36%;
       }
+      h1, h3 {
+        text-shadow: 0px 3px blanchedalmond;
+      }
       .button { 
         background-color: blanchedalmond;
-        border: none;
+        border: 10px;
         border-radius: 6px;
+        border-color: black;
         color: black;
         padding: 10px 22px;
         text-align: center;
@@ -31,14 +35,14 @@
         font-size: 16px;
       }
       .button:hover {
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.10);
       } 
     </style>
   </head>
   <body>
     <div>
       <h1>The Fortune Cookie</h1>
-      <h4>Click the button below to reveal your good fortune</h4>
+      <p>Click the button below to reveal your good fortune</p>
       <button class="button" onclick="giveQuote()" type="button">Click for fortune.</button>
       <h3 id="quote">Your fortune is within...</h3>
         <script>
